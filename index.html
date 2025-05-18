@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh - CN">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF - 8">
-    <meta name="viewport" content="width = device - width, initial - scale = 1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GTTOE官网</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font - awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -24,7 +24,7 @@
                         }
                     },
                     fontFamily: {
-                        inter: ['Inter','system - ui','sans - serif'],
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
                     },
                 },
             }
@@ -32,458 +32,498 @@
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
-           .content - auto {
-                content - visibility: auto;
+            .content-auto {
+                content-visibility: auto;
             }
-           .text - shadow {
-                text - shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
             }
-           .text - shadow - lg {
-                text - shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+            .text-shadow-lg {
+                text-shadow: 0 4px 8px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.08);
             }
-           .transition - custom {
-                transition: all 0.3s cubic - bezier(0.4, 0, 0.2, 1);
+            .transition-custom {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             }
-           .carousel - container {
-                max - width: 100%;
-                height: 40vh;
-                min - height: 200px;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                margin - bottom: -8px; /* 减少底部空白 */
+            .carousel-container {
+                max-width: 1920px;
+                height: 800px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
-           .carousel - img {
-                width: 100%;
-                height: 100%;
-                object - fit: cover;
-            }
-            /* 移动端适配 */
-            @media (max - width: 768px) {
-               .carousel - container {
-                    height: 35vh; /* 手机端高度调整 */
-                }
+            .carousel-img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
             }
         }
     </style>
 </head>
-<body class="font - inter text - neutral - 700 bg - white">
+<body class="font-inter text-neutral-700 bg-white">
     <!-- 导航栏 -->
-    <header id="navbar" class="fixed w - full top - 0 z - 50 transition - all duration - 300 bg - white/95 shadow - sm">
-        <div class="container mx - auto px - 4 sm:px - 6 lg:px - 8">
-            <div class="flex justify - between items - center h - 16 md:h - 20">
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
                 <!-- Logo -->
-                <a href="#" class="flex items - center">
+                <a href="#" class="flex items-center">
                     <div>
+            
                     </div>
-                    <span class="text - xl font - bold text - neutral - 700">GTTOE海外旗舰店</span>
+                    <span class="text-xl font-bold text-neutral-700">GTTOE海外旗舰店</span>
                 </a>
+                
                 <!-- 桌面导航 -->
-                <nav class="hidden md:flex space - x - 8">
-                    <a href="#" class="text - primary font - medium hover:text - primary/80 transition - custom">首页</a>
-                    <a href="#about" class="text - neutral - 600 font - medium hover:text - primary transition - custom">关于我们</a>
-                    <a href="#products" class="text - neutral - 600 font - medium hover:text - primary transition - custom">产品中心</a>
-                    <a href="#contact" class="text - neutral - 600 font - medium hover:text - primary transition - custom">联系我们</a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-primary font-medium hover:text-primary/80 transition-custom">首页</a>
+                    <a href="#about" class="text-neutral-600 font-medium hover:text-primary transition-custom">关于我们</a>
+                    <a href="#products" class="text-neutral-600 font-medium hover:text-primary transition-custom">产品中心</a>
+                    <a href="#contact" class="text-neutral-600 font-medium hover:text-primary transition-custom">联系我们</a>
                 </nav>
+                
                 <!-- 移动端菜单按钮 -->
-                <button id="menu - toggle" class="md:hidden text - neutral - 600 focus:outline - none">
-                    <i class="fa - solid fa - bars text - xl"></i>
+                <button id="menu-toggle" class="md:hidden text-neutral-600 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
+        
         <!-- 移动端导航菜单 -->
-        <div id="mobile - menu" class="md:hidden hidden bg - white border - t border - neutral - 200 shadow - md">
-            <div class="container mx - auto px - 4 py - 3 space - y - 3">
-                <a href="#" class="block py - 2 text - primary font - medium">首页</a>
-                <a href="#about" class="block py - 2 text - neutral - 600 hover:text - primary transition - custom">关于我们</a>
-                <a href="#products" class="block py - 2 text - neutral - 600 hover:text - primary transition - custom">产品中心</a>
-                <a href="#contact" class="block py - 2 text - neutral - 600 hover:text - primary transition - custom">联系我们</a>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-neutral-200 shadow-md">
+            <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="#" class="block py-2 text-primary font-medium">首页</a>
+                <a href="#about" class="block py-2 text-neutral-600 hover:text-primary transition-custom">关于我们</a>
+                <a href="#products" class="block py-2 text-neutral-600 hover:text-primary transition-custom">产品中心</a>
+                <a href="#contact" class="block py-2 text-neutral-600 hover:text-primary transition-custom">联系我们</a>
             </div>
         </div>
     </header>
+
     <!-- 图片轮播 -->
-    <section class="pt - 12 md:pt - 16"> <!-- 调整顶部边距 -->
-        <div id="carousel" class="relative overflow - hidden carousel - container mx - auto">
-            <div id="carousel - inner" class="flex transition - transform duration - 500 ease - in - out h - full">
+    <section class="pt-16 md:pt-20">
+        <div id="carousel" class="relative overflow-hidden carousel-container mx-auto">
+            <div id="carousel-inner" class="flex transition-transform duration-500 ease-in-out h-full">
                 <!-- 轮播图片1 -->
-                <div class="w - full flex - shrink - 0 h - full">
-                    <img src="1920x800 - 01.png" alt="GTTOE产品展示" class="carousel - img">
+                <div class="w-full flex-shrink-0 h-full flex items-center justify-center">
+                    <img src="1920x800-01.png" alt="GTTOE产品展示" class="carousel-img">
                 </div>
+                
                 <!-- 轮播图片2 -->
-                <div class="w - full flex - shrink - 0 h - full">
-                    <img src="1920x800 - 02.png" alt="GTTOE研发团队" class="carousel - img">
+                <div class="w-full flex-shrink-0 h-full flex items-center justify-center">
+                    <img src="1920x800-02.png" alt="GTTOE研发团队" class="carousel-img">
                 </div>
+                
                 <!-- 轮播图片3 -->
-                <div class="w - full flex - shrink - 0 h - full">
-                    <img src="1920x800pin.png" alt="GTTOE健康理念" class="carousel - img">
+                <div class="w-full flex-shrink-0 h-full flex items-center justify-center">
+                    <img src="1920x800pin.png" alt="GTTOE健康理念" class="carousel-img">
                 </div>
             </div>
+            
             <!-- 轮播控制按钮 -->
-            <button id="prev - btn" class="absolute left - 4 top - 1/2 - translate - y - 1/2 w - 10 h - 10 rounded - full bg - white/30 backdrop - blur - sm text - white flex items - center justify - center hover:bg - white/50 transition - custom focus:outline - none">
-                <i class="fa - solid fa - chevron - left"></i>
+            <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/50 transition-custom focus:outline-none">
+                <i class="fa-solid fa-chevron-left"></i>
             </button>
-            <button id="next - btn" class="absolute right - 4 top - 1/2 - translate - y - 1/2 w - 10 h - 10 rounded - full bg - white/30 backdrop - blur - sm text - white flex items - center justify - center hover:bg - white/50 transition - custom focus:outline - none">
-                <i class="fa - solid fa - chevron - right"></i>
+            <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/30 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/50 transition-custom focus:outline-none">
+                <i class="fa-solid fa-chevron-right"></i>
             </button>
+            
             <!-- 轮播指示器 -->
-            <div class="absolute bottom - 6 left - 1/2 - translate - x - 1/2 flex space - x - 2">
-                <button class="w - 3 h - 3 rounded - full bg - white/50 carousel - indicator active" data - index="0"></button>
-                <button class="w - 3 h - 3 rounded - full bg - white/50 carousel - indicator" data - index="1"></button>
-                <button class="w - 3 h - 3 rounded - full bg - white/50 carousel - indicator" data - index="2"></button>
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
+                <button class="w-3 h-3 rounded-full bg-white/50 carousel-indicator active" data-index="0"></button>
+                <button class="w-3 h-3 rounded-full bg-white/50 carousel-indicator" data-index="1"></button>
+                <button class="w-3 h-3 rounded-full bg-white/50 carousel-indicator" data-index="2"></button>
             </div>
         </div>
     </section>
+
     <!-- 关于我们 -->
-    <section id="about" class="py - 16 md:py - 24 bg - neutral - 100">
-        <div class="container mx - auto px - 4 sm:px - 6 lg:px - 8">
-            <div class="text - center mb - 16">
-                <h2 class="text - [clamp(1.5rem,3vw,2.5rem)] font - bold text - neutral - 800 mb - 4">GTTOE的故事</h2>
-                <div class="w - 20 h - 1 bg - primary mx - auto mb - 6"></div>
-                <p class="text - neutral - 600 max - w - 3xl mx - auto">GTTOE是创立于美国波士顿的膳食营养品牌</p>
+    <section id="about" class="py-16 md:py-24 bg-neutral-100">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-800 mb-4">GTTOE的故事</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-neutral-600 max-w-3xl mx-auto">GTTOE是创立于美国波士顿的膳食营养品牌</p>
             </div>
-            <div class="grid md:grid - cols - 2 gap - 12 items - center">
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="relative">
-                    <img src="800x600.png" alt="研发环境" class="w - full h - auto rounded - xl shadow - xl">
-                    <div class="absolute - bottom - 6 - right - 6 w - 32 h - 32 bg - primary rounded - lg flex items - center justify - center shadow - lg">
-                        <div class="text - center text - white">
-                            <div class="text - 3xl font - bold">GTTOE</div>
-                            <div class="text - sm">研发中心</div>
+                    <img src="800x600.png" alt="研发环境" class="w-full h-auto rounded-xl shadow-xl">
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-lg flex items-center justify-center shadow-lg">
+                        <div class="text-center text-white">
+                            <div class="text-3xl font-bold">GTTOE</div>
+                            <div class="text-sm">研发中心</div>
                         </div>
                     </div>
                 </div>
+                
                 <div>
-                    <h3 class="text - 2xl font - bold text - neutral - 800 mb - 6">品牌介绍</h3>
-                    <p class="text - neutral - 600 mb - 6 leading - relaxed">
+                    <h3 class="text-2xl font-bold text-neutral-800 mb-6">品牌介绍</h3>
+                    <p class="text-neutral-600 mb-6 leading-relaxed">
                         GTTOE创立于美国波士顿，致力于美国前沿医学研究成果转化，为全球消费者提供高品质的精准营养健康产品。多年来GTTOE潜心探索和创新开发，以构建人体自身免疫为核心，修复细胞为基础，开发出围绕:肝脏健康、心血管系统、脑血管系统、肠内分泌系统以及肠胃健康等多种功能膳食营养产品。
                     </p>
-                    <div class="grid sm:grid - cols - 2 gap - 6 mb - 8">
-                        <div class="flex items - start">
-                            <div class="w - 10 h - 10 rounded - full bg - primary/10 flex items - center justify - center text - primary mr - 4">
-                                <i class="fa - solid fa - lightbulb"></i>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                <i class="fa-solid fa-lightbulb"></i>
                             </div>
                             <div>
-                                <h4 class="font - bold text - neutral - 800 mb - 2">创新思维</h4>
-                                <p class="text - neutral - 600 text - sm">不断探索新技术、新方法，为客户提供优质健康服务</p>
+                                <h4 class="font-bold text-neutral-800 mb-2">创新思维</h4>
+                                <p class="text-neutral-600 text-sm">不断探索新技术、新方法，为客户提供优质健康服务</p>
                             </div>
                         </div>
-                        <div class="flex items - start">
-                            <div class="w - 10 h - 10 rounded - full bg - primary/10 flex items - center justify - center text - primary mr - 4">
-                                <i class="fa - solid fa - users"></i>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                <i class="fa-solid fa-users"></i>
                             </div>
                             <div>
-                                <h4 class="font - bold text - neutral - 800 mb - 2">全球服务</h4>
-                                <p class="text - neutral - 600 text - sm">以客户需求为中心，依托全球物流，服务全球</p>
+                                <h4 class="font-bold text-neutral-800 mb-2">全球服务</h4>
+                                <p class="text-neutral-600 text-sm">以客户需求为中心，依托全球物流，服务全球</p>
                             </div>
                         </div>
-                        <div class="flex items - start">
-                            <div class="w - 10 h - 10 rounded - full bg - primary/10 flex items - center justify - center text - primary mr - 4">
-                                <i class="fa - solid fa - cogs"></i>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                <i class="fa-solid fa-cogs"></i>
                             </div>
                             <div>
-                                <h4 class="font - bold text - neutral - 800 mb - 2">专业团队</h4>
-                                <p class="text - neutral - 600 text - sm">拥有行业顶尖专家和技术人才，采用前沿技术研发与实验</p>
+                                <h4 class="font-bold text-neutral-800 mb-2">专业团队</h4>
+                                <p class="text-neutral-600 text-sm">拥有行业顶尖专家和技术人才，采用前沿技术研发与实验</p>
                             </div>
                         </div>
-                        <div class="flex items - start">
-                            <div class="w - 10 h - 10 rounded - full bg - primary/10 flex items - center justify - center text - primary mr - 4">
-                                <i class="fa - solid fa - rocket"></i>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                <i class="fa-solid fa-rocket"></i>
                             </div>
                             <div>
-                                <h4 class="font - bold text - neutral - 800 mb - 2">专注健康</h4>
-                                <p class="text - neutral - 600 text - sm">扎根于波士顿，整合优质资源，专注健康产品研发</p>
+                                <h4 class="font-bold text-neutral-800 mb-2">专注健康</h4>
+                                <p class="text-neutral-600 text-sm">扎根于波士顿，整合优质资源，专注健康产品研发</p>
                             </div>
                         </div>
                     </div>
-                    <a href="#contact" class="inline - flex items - center text - primary font - medium hover:text - primary/80 transition - custom">
+                    
+                    <a href="#contact" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-custom">
                         了解更多关于我们的故事
-                        <i class="fa - solid fa - arrow - right ml - 2"></i>
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
                     </a>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- 产品中心 -->
-    <section id="products" class="py - 16 md:py - 24">
-        <div class="container mx - auto px - 4 sm:px - 6 lg:px - 8">
-            <div class="text - center mb - 16">
-                <h2 class="text - [clamp(1.5rem,3vw,2.5rem)] font - bold text - neutral - 800 mb - 4">产品中心</h2>
-                <div class="w - 20 h - 1 bg - primary mx - auto mb - 6"></div>
-                <p class="text - neutral - 600 max - w - 3xl mx - auto">我们提供全方位的膳食营养解决方案，满足不同客户的健康需求。</p>
+    <section id="products" class="py-16 md:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-800 mb-4">产品中心</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-neutral-600 max-w-3xl mx-auto">我们提供全方位的膳食营养解决方案，满足不同客户的健康需求。</p>
             </div>
-            <div class="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 产品卡片1 -->
-                <div class="bg - white rounded - xl overflow - hidden shadow - lg hover:shadow - xl transition - custom group">
-                    <div class="relative h - 60 overflow - hidden">
-                        <img src="chanpin01.png" alt="肝脏健康系列" class="w - full h - full object - cover group - hover:scale - 105 transition - transform duration - 500">
-                        <div class="absolute inset - 0 bg - gradient - to - t from - black/60 to - transparent flex items - end">
-                            <div class="p - 6">
-                                <h3 class="text - xl font - bold text - white">肝脏健康系列</h3>
-                                <p class="text - white/80 text - sm">肝脏排毒、修复与保护</p>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="chanpin01.png" alt="肝脏健康系列" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white">肝脏健康系列</h3>
+                                <p class="text-white/80 text-sm">肝脏排毒、修复与保护</p>
                             </div>
                         </div>
                     </div>
-                    <div class="p - 6">
-                        <p class="text - neutral - 600 mb - 6">基于前沿医学研究成果，专注于肝脏健康，帮助肝脏排毒、修复受损细胞并提供持久保护。</p>
-                        <a href="#" class="inline - flex items - center text - primary font - medium hover:text - primary/80 transition - custom">
+                    <div class="p-6">
+                        <p class="text-neutral-600 mb-6">基于前沿医学研究成果，专注于肝脏健康，帮助肝脏排毒、修复受损细胞并提供持久保护。</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-custom">
                             了解详情
-                            <i class="fa - solid fa - arrow - right ml - 2"></i>
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
+                
                 <!-- 产品卡片2 -->
-                <div class="bg - white rounded - xl overflow - hidden shadow - lg hover:shadow - xl transition - custom group">
-                    <div class="relative h - 60 overflow - hidden">
-                        <img src="CHANPIN02.png" alt="心血管系统系列" class="w - full h - full object - cover group - hover:scale - 105 transition - transform duration - 500">
-                        <div class="absolute inset - 0 bg - gradient - to - t from - black/60 to - transparent flex items - end">
-                            <div class="p - 6">
-                                <h3 class="text - xl font - bold text - white">心血管系统系列</h3>
-                                <p class="text - white/80 text - sm">心脏保护、血脂调节</p>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="CHANPIN02.png" alt="心血管系统系列" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white">心血管系统系列</h3>
+                                <p class="text-white/80 text-sm">心脏保护、血脂调节</p>
                             </div>
                         </div>
                     </div>
-                    <div class="p - 6">
-                        <p class="text - neutral - 600 mb - 6">采用天然成分，科学配方，有助于维持心血管健康，调节血脂，保护心脏功能。</p>
-                        <a href="#" class="inline - flex items - center text - primary font - medium hover:text - primary/80 transition - custom">
+                    <div class="p-6">
+                        <p class="text-neutral-600 mb-6">采用天然成分，科学配方，有助于维持心血管健康，调节血脂，保护心脏功能。</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-custom">
                             了解详情
-                            <i class="fa - solid fa - arrow - right ml - 2"></i>
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
+                
                 <!-- 产品卡片3 -->
-                <div class="bg - white rounded - xl overflow - hidden shadow - lg hover:shadow - xl transition - custom group">
-                    <div class="relative h - 60 overflow - hidden">
-                        <img src="chanpin03.png" alt="脑血管系统系列" class="w - full h - full object - cover group - hover:scale - 105 transition - transform duration - 500">
-                        <div class="absolute inset - 0 bg - gradient - to - t from - black/60 to - transparent flex items - end">
-                            <div class="p - 6">
-                                <h3 class="text - xl font - bold text - white">肠胃系统系列</h3>
-                                <p class="text - white/80 text - sm">调节肠道菌群平衡</p>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="chanpin03.png" alt="脑血管系统系列" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white">肠胃系统系列</h3>
+                                <p class="text-white/80 text-sm">调节肠道菌群平衡</p>
                             </div>
                         </div>
                     </div>
-                    <div class="p - 6">
-                        <p class="text - neutral - 600 mb - 6">专为肠胃健康设计，提供必要营养支持，改善菌群环境，提升肠胃功能。</p>
-                        <a href="#" class="inline - flex items - center text - primary font - medium hover:text - primary/80 transition - custom">
+                    <div class="p-6">
+                        <p class="text-neutral-600 mb-6">专为肠胃健康设计，提供必要营养支持，改善菌群环境，提升肠胃功能。</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-custom">
                             了解详情
-                            <i class="fa - solid fa - arrow - right ml - 2"></i>
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="text - center mt - 12">
-                <a href="#" class="inline - block bg - primary text - white px - 8 py - 3 rounded - lg font - medium hover:bg - primary/90 transition - custom shadow - lg hover:shadow - xl transform hover:-translate - y - 1">
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary/90 transition-custom shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                     查看全部产品
                 </a>
             </div>
         </div>
     </section>
+
     <!-- 联系我们 -->
-    <section id="contact" class="py - 16 md:py - 24 bg - neutral - 100">
-        <div class="container mx - auto px - 4 sm:px - 6 lg:px - 8">
-            <div class="text - center mb - 16">
-                <h2 class="text - [clamp(1.5rem,3vw,2.5rem)] font - bold text - neutral - 800 mb - 4">联系我们</h2>
-                <div class="w - 20 h - 1 bg - primary mx - auto mb - 6"></div>
-                <p class="text - neutral - 600 max - w - 3xl mx - auto">无论您有任何问题或需求，我们都很乐意听取您的意见并为您提供帮助。</p>
+    <section id="contact" class="py-16 md:py-24 bg-neutral-100">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-800 mb-4">联系我们</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-neutral-600 max-w-3xl mx-auto">无论您有任何问题或需求，我们都很乐意听取您的意见并为您提供帮助。</p>
             </div>
-            <div class="bg - white p - 8 rounded - xl shadow - lg max - w - 4xl mx - auto">
-                <div class="grid md:grid - cols - 2 gap - 12">
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
                     <div>
-                        <div class="space - y - 6">
-                            <div class="flex items - start mt - 12">
-                                <div class="w - 12 h - 12 rounded - full bg - primary/10 flex items - center justify - center text - primary mr - 4">
-                                    <i class="fa - solid fa - phone"></i>
+                        <div class="space-y-6">
+                           
+                            
+                            <div class="flex items-start mt-12">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                    <i class="fa-solid fa-phone"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font - bold text - neutral - 800 mb - 1">联系电话</h4>
-                                    <p class="text - neutral - 600">17615695625</p>
+                                    <h4 class="font-bold text-neutral-800 mb-1">联系电话</h4>
+                                    <p class="text-neutral-600">17615695625</p>
                                 </div>
                             </div>
-                            <div class="flex items - start">
-                                <div class="w - 12 h - 12 rounded - full bg - primary/10 flex items - center justify - center text - primary mr - 4">
-                                    <i class="fa - solid fa - envelope"></i>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                    <i class="fa-solid fa-envelope"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font - bold text - neutral - 800 mb - 1">电子邮箱</h4>
-                                    <p class="text - neutral - 600">technicaldirector@gttoe.top</p>
+                                    <h4 class="font-bold text-neutral-800 mb-1">电子邮箱</h4>
+                                    <p class="text-neutral-600">technicaldirector@gttoe.top<technicaldirector@gttoe.top></p>
                                 </div>
                             </div>
-                            <div class="flex items - start">
-                                <div class="w - 12 h - 12 rounded - full bg - primary/10 flex items - center justify - center text - primary mr - 4">
-                                    <i class="fa - solid fa - clock"></i>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                    <i class="fa-solid fa-clock"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font - bold text - neutral - 800 mb - 1">工作时间</h4>
-                                    <p class="text - neutral - 600">周一至周日: 8:00 - 17:30</p>
+                                    <h4 class="font-bold text-neutral-800 mb-1">工作时间</h4>
+                                    <p class="text-neutral-600">周一至周日: 8:00 - 17:30</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div>
-                        <h3 class="text - 2xl font - bold text - neutral - 800 mb - 6">关注我们</h3>
-                        <div class="rounded - xl overflow - hidden h - 64">
-                            <img src="600X400.png" alt="GTTOE海外旗舰店" class="w - full h - full object - cover">
+                        <h3 class="text-2xl font-bold text-neutral-800 mb-6">关注我们</h3>
+                        <div class="rounded-xl overflow-hidden h-64v ;">
+                            <img src="../img/600X400.png" alt="GTTOE海外旗舰店" class="w-full h-full object-cover">
                         </div>
-                        <div class="flex space - x - 4 mb - 8 mt - 12">
-                            <a href="#" class="w - 12 h - 12 rounded - full bg - [#1877F2]/10 flex items - center justify - center text - [#1877F2] hover:bg - [#1877F2]/20 transition - custom">
-                                <i class="fa - brands fa - facebook"></i>
+                        <div class="flex space-x-4 mb-8 mt-12">
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#1877F2]/10 flex items-center justify-center text-[#1877F2] hover:bg-[#1877F2]/20 transition-custom">
+                                <i class="fa-brands fa-facebook"></i>
                             </a>
-                            <a href="#" class="w - 12 h - 12 rounded - full bg - [#1DA1F2]/10 flex items - center justify - center text - [#1DA1F2] hover:bg - [#1DA1F2]/20 transition - custom">
-                                <i class="fa - brands fa - twitter"></i>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2] hover:bg-[#1DA1F2]/20 transition-custom">
+                                <i class="fa-brands fa-twitter"></i>
                             </a>
-                            <a href="#" class="w - 12 h - 12 rounded - full bg - [#0A66C2]/10 flex items - center justify - center text - [#0A66C2] hover:bg - [#0A66C2]/20 transition - custom">
-                                <i class="fa - brands fa - linkedin"></i>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#0A66C2]/10 flex items-center justify-center text-[#0A66C2] hover:bg-[#0A66C2]/20 transition-custom">
+                                <i class="fa-brands fa-linkedin"></i>
                             </a>
-                            <a href="#" class="w - 12 h - 12 rounded - full bg - [#E60023]/10 flex items - center justify - center text - [#E60023] hover:bg - [#E60023]/20 transition - custom">
-                                <i class="fa - brands fa - pinterest"></i>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#E60023]/10 flex items-center justify-center text-[#E60023] hover:bg-[#E60023]/20 transition-custom">
+                                <i class="fa-brands fa-pinterest"></i>
                             </a>
-                            <a href="#" class="w - 12 h - 12 rounded - full bg - [#FF0000]/10 flex items - center justify - center text - [#FF0000] hover:bg - [#FF0000]/20 transition - custom">
-                                <i class="fa - brands fa - youtube"></i>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#FF0000]/10 flex items-center justify-center text-[#FF0000] hover:bg-[#FF0000]/20 transition-custom">
+                                <i class="fa-brands fa-youtube"></i>
                             </a>
                         </div>
+                        
+                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- 页脚 -->
-    <footer class="bg - neutral - 800 text - white pt - 16 pb - 8">
-        <div class="container mx - auto px - 4 sm:px - 6 lg:px - 8">
-            <div class="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 12 mb - 12">
+    <footer class="bg-neutral-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <div>
-                    <div class="flex items - center mb - 6">
-                        <div class="w - 40 h - 10 rounded - lg bg - white flex items - center justify - center mr - 3">
-                            <span class="text - primary font - bold text - xl">GTTOE</span>
+                    <div class="flex items-center mb-6">
+                        <div class="w-40 h-10 rounded-lg bg-white flex items-center justify-center mr-3">
+                            <span class="text-primary font-bold text-xl">GTTOE</span>
                         </div>
-                        <span class="text - xl font - bold text - white">海外旗舰店</span>
+                        <span class="text-xl font-bold text-white">海外旗舰店</span>
                     </div>
-                    <p class="text - neutral - 400 mb - 6">专注健康产业研发，全球购膳食营养开拓者</p>
-                    <div class="flex space - x - 4">
-                        <a href="#" class="text - neutral - 400 hover:text - white transition - custom">
-                            <i class="fa - brands fa - facebook"></i>
+                    <p class="text-neutral-400 mb-6">专注健康产业研发，全球购膳食营养开拓者</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
+                            <i class="fa-brands fa-facebook"></i>
                         </a>
-                        <a href="#" class="text - neutral - 400 hover:text - white transition - custom">
-                            <i class="fa - brands fa - twitter"></i>
+                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
+                            <i class="fa-brands fa-twitter"></i>
                         </a>
-                        <a href="#" class="text - neutral - 400 hover:text - white transition - custom">
-                            <i class="fa - brands fa - linkedin"></i>
+                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
+                            <i class="fa-brands fa-linkedin"></i>
                         </a>
-                        <a href="#" class="text - neutral - 400 hover:text - white transition - custom">
-                            <i class="fa - brands fa - instagram"></i>
+                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
+                            <i class="fa-brands fa-instagram"></i>
                         </a>
                     </div>
                 </div>
+                
                 <div>
-                    <h4 class="text - lg font - bold mb - 6">快速链接</h4>
-                    <ul class="space - y - 3">
-                        <li><a href="#" class="text - neutral - 400 hover:text - white transition - custom">首页</a></li>
-                        <li><a href="#about" class="text - neutral - 400 hover:text - white transition - custom">关于我们</a></li>
-                        <li><a href="#products" class="text - neutral - 400 hover:text - white transition - custom">产品中心</a></li>
-                        <li><a href="#contact" class="text - neutral - 400 hover:text - white transition - custom">联系我们</a></li>
-                        <li><a href="#" class="text - neutral - 400 hover:text - white transition - custom">服务条款</a></li>
-                        <li><a href="#" class="text - neutral - 400 hover:text - white transition - custom">隐私政策</a></li>
+                    <h4 class="text-lg font-bold mb-6">快速链接</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">首页</a></li>
+                        <li><a href="#about" class="text-neutral-400 hover:text-white transition-custom">关于我们</a></li>
+                        <li><a href="#products" class="text-neutral-400 hover:text-white transition-custom">产品中心</a></li>
+                        <li><a href="#contact" class="text-neutral-400 hover:text-white transition-custom">联系我们</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">服务条款</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">隐私政策</a></li>
                     </ul>
                 </div>
+                
                 <div>
-                    <h4 class="text - lg font - bold mb - 6">产品服务</h4>
-                    <ul class="space - y - 3">
-                        <li><a href="#" class="text - neutral - 400 hover:text - white transition - custom">肝脏健康系列</a></li>
-                        <li><a href="#" class="text - neutral - 400 hover:text - white transition - custom">心血管系统系列</a></li>
-                        <li><a href="#" class="text - neutral - 400 hover:text - white transition - custom">脑血管系统系列</a></li>
-                        <li><a href="#" class="text - neutral - 400 hover:text - white transition - custom">肠内分泌系统系列</a></li>
-                        <li><a href="#" class="text - neutral - 400 hover:text - white transition - custom">肠胃健康系列</a></li>
+                    <h4 class="text-lg font-bold mb-6">产品服务</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">肝脏健康系列</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">心血管系统系列</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">脑血管系统系列</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">肠内分泌系统系列</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">肠胃健康系列</a></li>
                     </ul>
                 </div>
+                
                 <div>
-                    <h4 class="text - lg font - bold mb - 6">联系我们</h4>
-                    <ul class="space - y - 4">
-                        <li class="flex items - start">
-                            <i class="fa - solid fa - map - marker - alt text - primary mt - 1 mr - 3"></i>
-                            <span class="text - neutral - 400">GTTOE海外旗舰店</span>
+                    <h4 class="text-lg font-bold mb-6">联系我们</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                            <span class="text-neutral-400">GTTOE海外旗舰店</span>
                         </li>
-                        <li class="flex items - start">
-                            <i class="fa - solid fa - phone text - primary mt - 1 mr - 3"></i>
-                            <span class="text - neutral - 400">17615695625</span>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-phone text-primary mt-1 mr-3"></i>
+                            <span class="text-neutral-400">17615695625</span>
                         </li>
-                        <li class="flex items - start">
-                            <i class="fa - solid fa - envelope text - primary mt - 1 mr - 3"></i>
-                            <span class="text - neutral - 400">technicaldirector@gttoe.top</span>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-envelope text-primary mt-1 mr-3"></i>
+                            <span class="text-neutral-400">technicaldirector@gttoe.top<technicaldirector@gttoe.top>.com</span>
                         </li>
-                        <li class="flex items - start">
-                            <i class="fa - solid fa - clock text - primary mt - 1 mr - 3"></i>
-                            <span class="text - neutral - 400">周一至周日: 8:00 - 17:30</span>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-clock text-primary mt-1 mr-3"></i>
+                            <span class="text-neutral-400">周一至周日: 8:00 - 17:30</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="border - t border - neutral - 700 pt - 8">
-                <div class="flex flex - col md:flex - row justify - between items - center">
-                    <p class="text - neutral - 500 text - sm mb - 4 md:mb - 0">© 2025 GTTOE. 保留所有权利.</p>
-                    <div class="flex space - x - 6">
-                        <a href="#" class="text - neutral - 500 hover:text - white text - sm transition - custom">隐私政策</a>
-                        <a href="#" class="text - neutral - 500 hover:text - white text - sm transition - custom">服务条款</a>
-                        <a href="#" class="text - neutral - 500 hover:text - white text - sm transition - custom">Cookie政策</a>
+            
+            <div class="border-t border-neutral-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-neutral-500 text-sm mb-4 md:mb-0">© 2025 GTTOE. 保留所有权利.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-neutral-500 hover:text-white text-sm transition-custom">隐私政策</a>
+                        <a href="#" class="text-neutral-500 hover:text-white text-sm transition-custom">服务条款</a>
+                        <a href="#" class="text-neutral-500 hover:text-white text-sm transition-custom">Cookie政策</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
     <script>
         // 导航栏滚动效果
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
-                navbar.classList.add('shadow - md');
-                navbar.classList.add('bg - white');
-                navbar.classList.remove('bg - white/95');
+                navbar.classList.add('shadow-md');
+                navbar.classList.add('bg-white');
+                navbar.classList.remove('bg-white/95');
             } else {
-                navbar.classList.remove('shadow - md');
-                navbar.classList.add('bg - white/95');
-                navbar.classList.remove('bg - white');
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('bg-white/95');
+                navbar.classList.remove('bg-white');
             }
         });
+        
         // 移动端菜单
-        const menuToggle = document.getElementById('menu - toggle');
-        const mobileMenu = document.getElementById('mobile - menu');
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+        
         // 图片轮播
         const carousel = document.getElementById('carousel');
-        const carouselInner = document.getElementById('carousel - inner');
+        const carouselInner = document.getElementById('carousel-inner');
         const slides = carouselInner.children;
         const slideCount = slides.length;
-        const prevBtn = document.getElementById('prev - btn');
-        const nextBtn = document.getElementById('next - btn');
-        const indicators = document.querySelectorAll('.carousel - indicator');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        
         let currentIndex = 0;
         const slideWidth = 100; // 百分比
+        
         // 设置轮播宽度
         carouselInner.style.width = `${slideCount * slideWidth}%`;
+        
         // 更新轮播位置
         function updateCarousel() {
             carouselInner.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+            
             // 更新指示器
             indicators.forEach((indicator, index) => {
                 if (index === currentIndex) {
                     indicator.classList.add('active');
-                    indicator.classList.add('bg - white');
-                    indicator.classList.remove('bg - white/50');
+                    indicator.classList.add('bg-white');
+                    indicator.classList.remove('bg-white/50');
                 } else {
                     indicator.classList.remove('active');
-                    indicator.classList.remove('bg - white');
-                    indicator.classList.add('bg - white/50');
+                    indicator.classList.remove('bg-white');
+                    indicator.classList.add('bg-white/50');
                 }
             });
         }
+        
         // 下一张
         function nextSlide() {
             currentIndex = (currentIndex + 1) % slideCount;
             updateCarousel();
         }
+        
         // 上一张
         function prevSlide() {
             currentIndex = (currentIndex - 1 + slideCount) % slideCount;
             updateCarousel();
         }
+        
         // 点击指示器切换幻灯片
         indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => {
@@ -491,31 +531,39 @@
                 updateCarousel();
             });
         });
+        
         // 按钮事件
         prevBtn.addEventListener('click', prevSlide);
         nextBtn.addEventListener('click', nextSlide);
+        
         // 自动轮播
         let autoplayInterval = setInterval(nextSlide, 5000);
+        
         // 鼠标悬停暂停自动轮播
         carousel.addEventListener('mouseenter', () => {
             clearInterval(autoplayInterval);
         });
+        
         // 鼠标离开恢复自动轮播
         carousel.addEventListener('mouseleave', () => {
             autoplayInterval = setInterval(nextSlide, 5000);
         });
+        
         // 平滑滚动
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
+                
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
+                
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
-                        behavior:'smooth'
+                        behavior: 'smooth'
                     });
+                    
                     // 如果是在移动端，点击后关闭菜单
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
@@ -523,10 +571,12 @@
                 }
             });
         });
+        
         // 确保图片正确加载并处理布局
         window.addEventListener('load', () => {
             updateCarousel();
         });
+        
         // 窗口大小变化时重新调整
         window.addEventListener('resize', () => {
             updateCarousel();
@@ -534,3 +584,4 @@
     </script>
 </body>
 </html>
+    
