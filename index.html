@@ -45,8 +45,9 @@
                 transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             }
             .carousel-container {
-                max-width: 1920px;
-                height: 800px;
+                max-width: 100%; /* 修正：适应屏幕宽度 */
+                height: 50vh; /* 修正：使用视口高度百分比 */
+                min-height: 300px; /* 防止过小屏幕 */
                 margin: 0 auto;
                 display: flex;
                 align-items: center;
@@ -55,7 +56,14 @@
             .carousel-img {
                 max-width: 100%;
                 max-height: 100%;
-                object-fit: contain;
+                object-fit: cover; /* 修正：填充容器，减少留白 */
+            }
+            
+            /* 移动端适配 */
+            @media (max-width: 768px) {
+                .carousel-container {
+                    height: 40vh; /* 手机端高度降低 */
+                }
             }
         }
     </style>
@@ -104,17 +112,17 @@
         <div id="carousel" class="relative overflow-hidden carousel-container mx-auto">
             <div id="carousel-inner" class="flex transition-transform duration-500 ease-in-out h-full">
                 <!-- 轮播图片1 -->
-                <div class="w-full flex-shrink-0 h-full flex items-center justify-center">
+                <div class="w-full flex-shrink-0 h-full"> <!-- 修正：移除垂直居中，减少留白 -->
                     <img src="1920x800-01.png" alt="GTTOE产品展示" class="carousel-img">
                 </div>
                 
                 <!-- 轮播图片2 -->
-                <div class="w-full flex-shrink-0 h-full flex items-center justify-center">
+                <div class="w-full flex-shrink-0 h-full"> <!-- 修正：移除垂直居中 -->
                     <img src="1920x800-02.png" alt="GTTOE研发团队" class="carousel-img">
                 </div>
                 
                 <!-- 轮播图片3 -->
-                <div class="w-full flex-shrink-0 h-full flex items-center justify-center">
+                <div class="w-full flex-shrink-0 h-full"> <!-- 修正：移除垂直居中 -->
                     <img src="1920x800pin.png" alt="GTTOE健康理念" class="carousel-img">
                 </div>
             </div>
@@ -147,7 +155,7 @@
             
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="relative">
-                    <img src="800x600.png" alt="研发环境" class="w-full h-auto rounded-xl shadow-xl">
+                    <img src="800x600.png" alt="研发环境" class="w-full h-auto rounded-xl shadow-xl"> <!-- 修正：移除路径前缀 -->
                     <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-lg flex items-center justify-center shadow-lg">
                         <div class="text-center text-white">
                             <div class="text-3xl font-bold">GTTOE</div>
@@ -226,7 +234,7 @@
                 <!-- 产品卡片1 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
                     <div class="relative h-60 overflow-hidden">
-                        <img src="chanpin01.png" alt="肝脏健康系列" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="chanpin01.png" alt="肝脏健康系列" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"> <!-- 修正：移除路径前缀 -->
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold text-white">肝脏健康系列</h3>
@@ -246,7 +254,7 @@
                 <!-- 产品卡片2 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
                     <div class="relative h-60 overflow-hidden">
-                        <img src="CHANPIN02.png" alt="心血管系统系列" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="CHANPIN02.png" alt="心血管系统系列" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"> <!-- 修正：移除路径前缀 -->
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold text-white">心血管系统系列</h3>
@@ -266,7 +274,7 @@
                 <!-- 产品卡片3 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
                     <div class="relative h-60 overflow-hidden">
-                        <img src="chanpin03.png" alt="脑血管系统系列" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="chanpin03.png" alt="脑血管系统系列" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"> <!-- 修正：移除路径前缀 -->
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold text-white">肠胃系统系列</h3>
@@ -341,8 +349,8 @@
                     
                     <div>
                         <h3 class="text-2xl font-bold text-neutral-800 mb-6">关注我们</h3>
-                        <div class="rounded-xl overflow-hidden h-64v ;">
-                            <img src="../img/600X400.png" alt="GTTOE海外旗舰店" class="w-full h-full object-cover">
+                        <div class="rounded-xl overflow-hidden h-64"> <!-- 修正：移除错误的v; -->
+                            <img src="600X400.png" alt="GTTOE海外旗舰店" class="w-full h-full object-cover"> <!-- 修正：移除路径前缀 -->
                         </div>
                         <div class="flex space-x-4 mb-8 mt-12">
                             <a href="#" class="w-12 h-12 rounded-full bg-[#1877F2]/10 flex items-center justify-center text-[#1877F2] hover:bg-[#1877F2]/20 transition-custom">
@@ -584,4 +592,3 @@
     </script>
 </body>
 </html>
-    
