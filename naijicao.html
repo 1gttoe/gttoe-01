@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTTOE奶蓟草产品介绍</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#FF7D00',
+                        neutral: {
+                            100: '#F5F7FA',
+                            200: '#E4E6EB',
+                            300: '#C9CDD4',
+                            400: '#86909C',
+                            500: '#4E5969',
+                            600: '#272E3B',
+                            700: '#1D2129',
+                        }
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                },
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .text-shadow-lg {
+                text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+            }
+            .transition-custom {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .carousel-container {
+                max-width: 1920px;
+                height: 800px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .carousel-img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+            .platform-card {
+                transition: all 0.3s ease;
+            }
+            .platform-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .product-image {
+                transition: all 0.5s ease;
+            }
+            .product-image:hover {
+                transform: scale(1.02);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+        }
+    </style>
+</head>
+
+<body class="font-inter text-neutral-700 bg-white">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                    <div>
+            
+                    </div>
+                    <span class="text-xl font-bold text-neutral-700">GTTOE海外旗舰店</span>
+                </a>
+                
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-neutral-600 font-medium hover:text-primary transition-custom">首页</a>
+                    <a href="#about" class="text-neutral-600 font-medium hover:text-primary/80 transition-custom">关于我们</a>
+                    <a href="#products" class="text-primary font-medium hover:text-primary transition-custom">产品中心</a>
+                    <a href="#contact" class="text-neutral-600 font-medium hover:text-primary transition-custom">联系我们</a>
+                </nav>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:hidden text-neutral-600 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-neutral-200 shadow-md">
+            <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="#" class="block py-2 text-neutral-600 hover:text-primary transition-custom">首页</a>
+                <a href="#about" class="block py-2 text-primary font-medium">关于我们</a>
+                <a href="#products" class="block py-2 text-neutral-600 hover:text-primary transition-custom">产品中心</a>
+                <a href="#contact" class="block py-2 text-neutral-600 hover:text-primary transition-custom">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+
+    
+
+   <!-- 产品特点 -->
+<section class="py-16 md:py-24 bg-neutral-100">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-800 mb-4">核心产品系列</h2>
+      <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      
+      <!-- 奶蓟草模块 -->
+    <a href="https://dwz.cn/NKyAcTHB" target="_blank" rel="noopener noreferrer"> 
+      <div class="bg-white rounded-xl shadow-lg p-8 transition-custom hover:scale-105">
+        <div class="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+          <i class="fa-solid fa-leaf text-2xl text-green-600"></i>
+        </div>
+        <h3 class="text-xl font-bold text-neutral-800 mb-4">奶蓟草护肝系列</h3>
+        <p class="text-neutral-600 mb-6">
+        <br>1.清除自由基、抑制炎症反应、调理酒精性肝病、肝毒性、肝硬化、病毒性肝炎等。
+        <br>2.提高肝脏活力、帮助排出肝脏毒素、促进肝脏细胞再生。
+        <br>3.调节体内胆固醇保护肝脏、降低脂肪肝风险。
+        <br>4.解酒护肝、抗肝损伤、保护细胞免受氧化损伤。
+        <br>5.加强代谢、加快有毒有害物质排出、减少身体伤害。
+        <br>6.GTTOE是来自美国原装进口品牌，创立于波士顿，拥有多项权威认证(FDA认证、SGS认证)，产品安全及品质有保障。
+        </p>
+        <div class="text-center">
+          <img src="../img/naijicaogoumai.png" alt="奶蓟草产品" class="w-48 h-auto mx-auto rounded-lg shadow-md">
+        </div>
+      </div>
+    </a>
+      <!-- 水蛭素模块 -->
+    <a href="https://dwz.cn/KZMNOvAU" target="_blank" rel="noopener noreferrer"> 
+      <div class="bg-white rounded-xl shadow-lg p-8 transition-custom hover:scale-105">
+        <div class="w-16 h-16 mx-auto mb-6 bg-secondary/10 rounded-full flex items-center justify-center">
+          <i class="fa-solid fa-dna text-2xl text-blue-600"></i>
+        </div>
+        <h3 class="text-xl font-bold text-neutral-800 mb-4">水蛭素溶栓系列</h3>
+        <p class="text-neutral-600 mb-6">
+        <br>1.溶解血栓、防止血栓形成、改善血液循环、保护血管内皮细胞。
+        <br>2.降血脂、降血压、调节血糖。
+        <br>3.溶解斑块、清洁血液垃圾、排出血液垃圾、通畅血管。
+        <br>4.改善微循环、降低血粘稠、软化血管、双向调节血压。
+        <br>5. 美国原装进口，创立于波士顿，拥有FDA认证，SGS认证，具有CMA/CNAS资质检测报告。
+
+        </p>
+        <div class="text-center">
+          <img src="../img/shuizhisugoumai.png" alt="水蛭素产品" class="w-48 h-auto mx-auto rounded-lg shadow-md">
+        </div>
+      </div>
+    </a>
+      <!-- 益生菌模块 -->
+       <a href="https://dwz.cn/T2IRHtBO" target="_blank" rel="noopener noreferrer"> 
+      <div class="bg-white rounded-xl shadow-lg p-8 transition-custom hover:scale-105">
+        <div class="w-16 h-16 mx-auto mb-6 bg-[#4CAF50]/10 rounded-full flex items-center justify-center">
+          <i class="fa-solid fa-bacteria text-2xl text-[#4CAF50]"></i>
+        </div>
+        <h3 class="text-xl font-bold text-neutral-800 mb-4">益生菌清肠系列</h3>
+        <p class="text-neutral-600 mb-6">
+        <br>1.调整肠道菌群平衡、促进消化吸收、维护肠道微生物平衡。
+        <br>2.促进肠道蠕动、抑制肠道不良微生物增值、改善肠道功能。
+        <br>3.补充膳食纤维、促进脂肪代谢（控制体重、减肥）。
+        <br>4.改善肠道含水量、保护肠道黏膜、促进排便、改善便秘。
+        <br>5.GTTOE是来自美国原装进口品牌，创立于波士顿，拥有多项权 威认证（FDA认证、SGS认证），产品安全及品质有保障。
+        </p>
+        <div class="text-center">
+          <img src="../img/yishengjungoumai.png" alt="益生菌产品" class="w-48 h-auto mx-auto rounded-lg shadow-md">
+        </div>
+      </div>
+       </a>
+    </div>
+  </div>
+  
+</section>
+    <!-- 销售平台展示 -->
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-800 mb-4">官方授权销售平台</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-neutral-600 max-w-3xl mx-auto">
+                    GTTOE产品在以下平台均有官方授权销售，品质保证，请认准官方旗舰店！
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
+                <!-- 天猫 -->
+                <div class="platform-card bg-white rounded-xl shadow-lg p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#FF4400]/10 flex items-center justify-center">
+                        <img src="../img/tianmao.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">天猫</h3>
+                    <p class="text-neutral-600">官方旗舰店</p>
+                </div>
+                
+                <!-- 快手 -->
+                <div class="platform-card bg-white rounded-xl shadow-lg p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#FF2D55]/10 flex items-center justify-center">
+                        <img src="../img/kuaishou.jpg" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">快手</h3>
+                    <p class="text-neutral-600">官方旗舰店</p>
+                </div>
+                
+                <!-- 拼多多 -->
+                <div class="platform-card bg-white rounded-xl shadow-lg p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#FF4F4F]/10 flex items-center justify-center">
+                       <img src="../img/pinduoduo.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">拼多多</h3>
+                    <p class="text-neutral-600">官方旗舰店</p>
+                </div>
+                
+                <!-- 抖音 -->
+                <div class="platform-card bg-white rounded-xl shadow-lg p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#000000]/10 flex items-center justify-center">
+                        <img src="../img/douyin.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">抖音</h3>
+                    <p class="text-neutral-600">官方旗舰店</p>
+                </div>
+                
+                <!-- 小红书 -->
+                <div class="platform-card bg-white rounded-xl shadow-lg p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#FF2442]/10 flex items-center justify-center">
+                        <img src="../img/xiaohongshu.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">小红书</h3>
+                    <p class="text-neutral-600">官方旗舰店</p>
+                </div>
+                
+                <!-- 有赞 -->
+                <div class="platform-card bg-white rounded-xl shadow-lg p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#00B2B2]/10 flex items-center justify-center">
+                       <img src="../img/youzan.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">有赞</h3>
+                    <p class="text-neutral-600">官方旗舰店</p>
+                </div>
+                
+                <!-- 京东 -->
+                <div class="platform-card bg-white rounded-xl shadow-lg p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#00F2EA]/10 flex items-center justify-center">
+                        <img src="../img/jingdong.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">京东</h3>
+                    <p class="text-neutral-600">官方旗舰店</p>
+                </div>
+                
+                <!-- 百度 -->
+                <div class="platform-card bg-white rounded-xl shadow-lg p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#FF9900]/10 flex items-center justify-center">
+                        <img src="../img/baidu.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold text-neutral-800 mb-2">百度健康</h3>
+                    <p class="text-neutral-600">官方旗舰店</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 使用方法与注意事项 -->
+    <section class="py-16 md:py-24 bg-neutral-100">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-800 mb-4">使用方法与注意事项</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold text-neutral-800 mb-4">使用方法</h3>
+                    <p class="text-neutral-600 mb-6">
+                        请按照产品说明进行使用，如有疑问可随时与客服沟通咨询
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-neutral-800 mb-4">注意事项</h3>
+                    <p class="text-neutral-600 mb-6">
+                        - 所有产品均为原装进口。<br>
+                        - 仅限18岁以上成年人使用<br>
+                        - 不同产品具体使用禁忌请咨询客服。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-16 md:py-24 bg-neutral-100">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-800 mb-4">联系我们</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-neutral-600 max-w-3xl mx-auto">
+                    无论您有任何问题或需求，我们都很乐意听取您的意见并为您提供帮助。
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <div class="space-y-6">
+                            <div class="flex items-start mt-12">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-neutral-800 mb-1">联系电话</h4>
+                                    <p class="text-neutral-600">17615695625</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-neutral-800 mb-1">电子邮箱</h4>
+                                    <p class="text-neutral-600">technicaldirector@gttoe.top</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-neutral-800 mb-1">工作时间</h4>
+                                    <p class="text-neutral-600">周一至周日: 8:00 - 17:30</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-neutral-800 mb-6">关注我们</h3>
+                        <div class="rounded-xl overflow-hidden h-64">
+                            <img src="600X400.png" alt="GTTOE海外旗舰店" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex space-x-4 mb-8 mt-12">
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#1877F2]/10 flex items-center justify-center text-[#1877F2] hover:bg-[#1877F2]/20 transition-custom">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#1DA1F2]/10 flex items-center justify-center text-[#1DA1F2] hover:bg-[#1DA1F2]/20 transition-custom">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#0A66C2]/10 flex items-center justify-center text-[#0A66C2] hover:bg-[#0A66C2]/20 transition-custom">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#E60023]/10 flex items-center justify-center text-[#E60023] hover:bg-[#E60023]/20 transition-custom">
+                                <i class="fa-brands fa-pinterest"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#FF0000]/10 flex items-center justify-center text-[#FF0000] hover:bg-[#FF0000]/20 transition-custom">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-neutral-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-40 h-10 rounded-lg bg-white flex items-center justify-center mr-3">
+                            <span class="text-primary font-bold text-xl">GTTOE</span>
+                        </div>
+                        <span class="text-xl font-bold text-white">海外旗舰店</span>
+                    </div>
+                    <p class="text-neutral-400 mb-6">专注健康产业研发，全球购膳食营养开拓者</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">快速链接</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">首页</a></li>
+                        <li><a href="#about" class="text-neutral-400 hover:text-white transition-custom">关于我们</a></li>
+                        <li><a href="#products" class="text-neutral-400 hover:text-white transition-custom">产品中心</a></li>
+                        <li><a href="#contact" class="text-neutral-400 hover:text-white transition-custom">联系我们</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">服务条款</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">隐私政策</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">产品服务</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">肝脏健康系列</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">心血管系统系列</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">脑血管系统系列</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">肠内分泌系统系列</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">肠胃健康系列</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">联系我们</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                            <span class="text-neutral-400">GTTOE海外旗舰店</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-phone text-primary mt-1 mr-3"></i>
+                            <span class="text-neutral-400">17615695625</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-envelope text-primary mt-1 mr-3"></i>
+                            <span class="text-neutral-400">technicaldirector@gttoe.top<technicaldirector@gttoe.top>.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-clock text-primary mt-1 mr-3"></i>
+                            <span class="text-neutral-400">周一至周日: 8:00 - 17:30</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-neutral-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-neutral-500 text-sm mb-4 md:mb-0">© 2025 GTTOE. 保留所有权利.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-neutral-500 hover:text-white text-sm transition-custom">隐私政策</a>
+                        <a href="#" class="text-neutral-500 hover:text-white text-sm transition-custom">服务条款</a>
+                        <a href="#" class="text-neutral-500 hover:text-white text-sm transition-custom">Cookie政策</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('bg-white/95');
+                navbar.classList.add('bg-white');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('bg-white/95');
+                navbar.classList.remove('bg-white');
+            }
+        });
+
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 关闭移动端菜单
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
